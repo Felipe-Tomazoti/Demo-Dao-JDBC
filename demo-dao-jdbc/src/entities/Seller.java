@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Seller implements Serializable {
 
-    private Integer Id;
-    private Date date;
+    private Integer id;
+    private Date birthDate;
     private String name;
     private String email;
     private Double baseSalary;
@@ -16,8 +16,8 @@ public class Seller implements Serializable {
     public Seller(){
     }
     public Seller(Integer id, Date date, String name, String email, Double baseSalary, Department department) {
-        Id = id;
-        this.date = date;
+        this.id = id;
+        this.birthDate = birthDate;
         this.name = name;
         this.email = email;
         this.baseSalary = baseSalary;
@@ -25,19 +25,19 @@ public class Seller implements Serializable {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Integer id) {
-        Id = id;
+        id = id;
     }
 
     public Date getDate() {
-        return date;
+        return birthDate;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.birthDate = date;
     }
 
     public String getName() {
@@ -77,19 +77,19 @@ public class Seller implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Seller seller = (Seller) o;
-        return Objects.equals(Id, seller.Id);
+        return Objects.equals(id, seller.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Id);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Seller{" +
-                "Id: " + Id +
-                ", date: " + date +
+                "Id: " + id +
+                ", birthDate: " + birthDate +
                 ", name: '" + name + '\'' +
                 ", email: '" + email + '\'' +
                 ", baseSalary: " + baseSalary +
