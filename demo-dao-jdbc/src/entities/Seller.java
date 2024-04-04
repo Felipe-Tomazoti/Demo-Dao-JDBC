@@ -15,7 +15,7 @@ public class Seller implements Serializable {
 
     public Seller(){
     }
-    public Seller(Integer id, Date date, String name, String email, Double baseSalary, Department department) {
+    public Seller(Integer id, Date birthDate, String name, String email, Double baseSalary, Department department) {
         this.id = id;
         this.birthDate = birthDate;
         this.name = name;
@@ -29,10 +29,10 @@ public class Seller implements Serializable {
     }
 
     public void setId(Integer id) {
-        id = id;
+        this.id = id;
     }
 
-    public Date getDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
